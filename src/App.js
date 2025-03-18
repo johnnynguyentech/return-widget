@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import ReactDOM from 'react-dom/client';
 import logo from "./Assets/Images/logo.png";
 import "./App.css";
 import Question from "./Components/Question/Question";
@@ -44,7 +45,7 @@ const questionsData = [
   },
 ];
 
-const App = () => {
+const App = ({ config }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -55,6 +56,35 @@ const App = () => {
   const accordionRef = useRef(null);
   const [accordionHeight, setAccordionHeight] = useState(0);
   const [warningMessage, setWarningMessage] = useState("");
+
+  useEffect(() => {
+    // This makes sure window.renderReturnWidget is available globally after React is loaded
+    console.log("render widget")
+    window.renderReturnWidget = function (containerId, config) {
+      const container = document.getElementById(containerId);
+      if (container) {
+        console.log(`Container found: #${containerId}`, container);
+        ReactDOM.createRoot(container).render(<App config={config} />);
+      } else {
+        console.error(`No container found with id: ${containerId}`);
+      }
+    };
+  }, []);
+
+  const setCSSVariables = (config) => {
+    const root = document.documentElement;
+    if (config.fontFamily) root.style.setProperty('--widget-font-family', config.fontFamily);
+    if (config.fontSize) root.style.setProperty('--widget-font-size', config.fontSize);
+    if (config.color) root.style.setProperty('--widget-color', config.color);
+    if (config.backgroundColor) root.style.setProperty('--widget-background-color', config.backgroundColor);
+    if (config.logo) root.style.setProperty('--widget-logo', config.logo);
+  };
+
+  useEffect(() => {
+    if (config) {
+      setCSSVariables(config);
+    }
+  }, [config]);
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -163,16 +193,16 @@ const App = () => {
                 <div className="return-status">
                   <h3>{returnStatus}</h3>
                   <div className="feedback">
-                  {!feedback && (
-                    <>
-                      <button className="feedback-btn" onClick={() => handleFeedback("thumbs-up")}>
-                        <i className="fa-solid fa-thumbs-up"></i>
-                      </button>
-                      <button className="feedback-btn" onClick={() => handleFeedback("thumbs-down")}>
-                        <i className="fa-solid fa-thumbs-down"></i>
-                      </button>
-                    </>
-                  )}
+                    {!feedback && (
+                      <>
+                        <button className="feedback-btn" onClick={() => handleFeedback("thumbs-up")}>
+                          <i className="fa-solid fa-thumbs-up"></i>
+                        </button>
+                        <button className="feedback-btn" onClick={() => handleFeedback("thumbs-down")}>
+                          <i className="fa-solid fa-thumbs-down"></i>
+                        </button>
+                      </>
+                    )}
                   </div>
                   {feedback && <p>Thank you for your feedback!</p>}
                   <button className="close-btn" onClick={handleClosePopup}>Close</button>
@@ -212,5 +242,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
