@@ -12,6 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 // Expose renderReturnWidget globally to embed the widget anywhere on the page
+console.log("renderReturnWidget loaded")
 window.renderReturnWidget = function (containerId, config) {
   console.log("renderReturnWidget function is being called");
 
@@ -24,6 +25,7 @@ window.renderReturnWidget = function (containerId, config) {
     console.error(`No container found with id: ${containerId}`);
   }
 };
+console.log("window.renderReturnWidget has been set!");
 
 // Performance reporting
 reportWebVitals();

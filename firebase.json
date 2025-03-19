@@ -6,11 +6,23 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [
+      {
+        "source": "**/*.js",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "!/static/**",
         "destination": "/index.html"
       }
     ]
+    
   }
 }
