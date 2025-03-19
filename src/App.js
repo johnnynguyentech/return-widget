@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import ReactDOM from 'react-dom/client';
 import defaultLogo from "./Assets/Images/logo.png";
 import "./App.css";
 import Question from "./Components/Question/Question";
@@ -57,20 +56,6 @@ const App = ({ config }) => {
   const accordionRef = useRef(null);
   const [accordionHeight, setAccordionHeight] = useState(0);
   const [warningMessage, setWarningMessage] = useState("");
-
-  useEffect(() => {
-    // This makes sure window.renderReturnWidget is available globally after React is loaded
-    console.log("render widget")
-    window.renderReturnWidget = function (containerId, config) {
-      const container = document.getElementById(containerId);
-      if (container) {
-        console.log(`Container found: #${containerId}`, container);
-        ReactDOM.createRoot(container).render(<App config={config} />);
-      } else {
-        console.error(`No container found with id: ${containerId}`);
-      }
-    };
-  }, []);
 
   const setCSSVariables = (config) => {
     const root = document.documentElement;
