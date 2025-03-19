@@ -6,9 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 
 // Render the app into the main root element
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // Expose renderReturnWidget globally to embed the widget anywhere on the page
