@@ -77,7 +77,7 @@ const App = ({ config }) => {
     if (config.fontSize) root.style.setProperty('--widget-font-size', config.fontSize);
     if (config.color) root.style.setProperty('--widget-color', config.color);
     if (config.backgroundColor) root.style.setProperty('--widget-background-color', config.backgroundColor);
-    if (config.logo) root.style.setProperty('--widget-logo', config.logo);
+    if (config.logo) logo = config.logo;
   };
 
   useEffect(() => {
