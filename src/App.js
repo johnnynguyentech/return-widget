@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from 'react-dom/client';
-import logo from "./Assets/Images/logo.png";
+import defaultLogo from "./Assets/Images/logo.png";
 import "./App.css";
 import Question from "./Components/Question/Question";
 import Answered from "./Components/Answered/Answered";
@@ -46,6 +46,7 @@ const questionsData = [
 ];
 
 const App = ({ config }) => {
+  const [logo, setLogo] = useState(defaultLogo);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -77,7 +78,7 @@ const App = ({ config }) => {
     if (config.fontSize) root.style.setProperty('--widget-font-size', config.fontSize);
     if (config.color) root.style.setProperty('--widget-color', config.color);
     if (config.backgroundColor) root.style.setProperty('--widget-background-color', config.backgroundColor);
-    if (config.logo) logo = config.logo;
+    if (config.logo) setLogo(config.logo);
   };
 
   useEffect(() => {
