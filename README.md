@@ -17,7 +17,7 @@ To add the widget to your webpage, include the following script at the bottom of
 ```html
 <div id="widget-container"></div>
 
-<script src="https://return-widget.web.app/static/js/main.804ed507.js" defer></script>
+<script src="https://return-widget.web.app/static/js/main.70344ef0.js" defer></script>
 <script>
     window.renderReturnWidget('widget-container', {
       fontFamily: "Poppins",
