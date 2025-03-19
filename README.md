@@ -10,10 +10,11 @@ View the widget through this Firebase hosted link: https://return-widget.web.app
 
 
 
-## How To Embedd the Widget To Your Own Webpage
+## How To Embed the Widget Into Your Webpage
 
-To add the widget to your own webpage, add this script to the bottom of your <body> tag in your HTML file. The widget can then be displayed through the following <div> tag.
+To add the widget to your webpage, include the following script at the bottom of your `<body>` tag in your HTML file. The widget will then be rendered inside the specified `<div>` tag.
 
+```html
 <div id="widget-container"></div>
 
 <script src="https://return-widget.web.app/static/js/main.js" defer></script>
