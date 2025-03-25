@@ -3,6 +3,7 @@
   --widget-font-size: 14px;
   --widget-color: #007bff;
   --widget-background-color: #383838;
+  --widget-font-color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6, button {
@@ -10,6 +11,7 @@ h1, h2, h3, h4, h5, h6, button {
   font-weight: 500;
   font-style: normal;
   font-size: var(--widget-font-size);
+  color: var(--widget-font-color);
 }
 
 p {
@@ -17,6 +19,7 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: var(--widget-font-size);
+  color: var(--widget-font-color);
 }
 .widget-container {
   position: relative;
@@ -26,7 +29,7 @@ p {
 .start-return-btn {
   padding: 10px 20px;
   background-color: var(--widget-color);
-  color: white;
+  color: var(--widget-font-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -68,7 +71,7 @@ p {
   display: flex;
   justify-content: space-between;
   background-color: var(--widget-color);;
-  color: white;
+  color: var(--widget-font-color);
   padding: 20px;
 }
 
@@ -90,7 +93,7 @@ p {
 }
 
 .question p {
-  color: white;
+  color: var(--widget-font-color);
   font-size: var(--widget-font-size);
 }
 
@@ -117,7 +120,7 @@ p {
 .accordion-toggle {
   background: none;
   text-align: center;
-  color: white;
+  color: var(--widget-font-color);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -138,7 +141,7 @@ p {
 }
 
 .no-answers-text{
-  color: white;
+  color: var(--widget-font-color);
   margin: 0;
   text-align: center;
   font-size: var(--widget-font-size);
@@ -149,8 +152,8 @@ p {
   padding: 10px;
   background-color: var(--widget-background-color);
   border-radius: 5px;
-  color: white;
-  border: 1px solid white;
+  color: var(--widget-font-color);
+  border: 1px solid var(--widget-font-color);;
 }
 
 .answered-item p {
@@ -165,7 +168,7 @@ p {
 button {
   padding: 5px 10px;
   background-color: var(--widget-color);
-  color: white;
+  color: var(--widget-font-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -173,7 +176,7 @@ button {
 
 .option-btn{
   background: none;
-  border: 1px solid white;
+  border: 1px solid var(--widget-font-color);;
   margin: 0 5px 5px 0;
   transition: 0.3s;
   font-size: var(--widget-font-size);
@@ -214,7 +217,7 @@ button {
 }
 
 .picture-option{
-  border: 1px solid white;
+  border: 1px solid var(--widget-font-color);;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
@@ -251,7 +254,7 @@ button {
 }
 
 .return-status{
-  color: white;
+  color: var(--widget-font-color);;
   text-align: center;
 }
 

@@ -24,6 +24,7 @@ To add the widget to your webpage, include the following script at the bottom of
       fontSize: '14px',
       color: '#007bff',
       backgroundColor: '#383838',
+      fontColor: '#ffffff',
       logo: 'path/to/logo.png'
     });
 </script>
