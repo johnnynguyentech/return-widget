@@ -18,6 +18,7 @@ Place the follow `<div>` anywhere on your webpage:
 
 ```html
 <div id="widget-container"></div>
+```
 
 Add this script at the bottom of your `<body>` tag in your HTML file. The colors, fonts, and logo are set by default but as the admin, you may change it as you please with the follow attributes:
 
@@ -33,3 +34,4 @@ Add this script at the bottom of your `<body>` tag in your HTML file. The colors
       logo: 'path/to/logo.png'
     });
 </script>
+```
