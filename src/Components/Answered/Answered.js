@@ -10,7 +10,7 @@ const Answered = ({ answeredQuestions, handleEdit }) => {
           <div className="answered-item" key={question.id}>
             <p><strong>{question.question}</strong></p>
             <p><em>{question.answer}</em></p>
-            <button onClick={() => handleEdit(question.id)}>Edit Answer</button>
+            <button className="edit-btn" onClick={() => handleEdit(question.id)}>Edit Answer</button>
           </div>
         ))
       )}

@@ -4,21 +4,31 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// Render the app into the main root element
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <App /> 
-);
 
-// Expose renderReturnWidget globally to embed the widget anywhere on the page
+// Expose the widget render function to the global scope
 window.renderReturnWidget = function (containerId, config) {
   const container = document.getElementById(containerId);
   if (container) {
-    ReactDOM.createRoot(container).render(<App config={config} />);
+    const root = ReactDOM.createRoot(container);
+    root.render(
+      <React.StrictMode>
+        <App config={config} />
+      </React.StrictMode>
+    );
   } else {
-    console.error(`Container with ID "${containerId}" not found`);
+    console.error(`Container with id "${containerId}" not found`);
   }
-};
-
-
-// Performance reporting
-reportWebVitals();
+  };
+  
+  // Remove the default render if it's being used as a widget
+  if (!document.getElementById("widget-container")) {
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+    );
+  }
+  
+  // Performance reporting
+  reportWebVitals();
