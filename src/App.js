@@ -179,13 +179,12 @@ const App = ({ config }) => {
                   <div className="feedback">
                     {!feedback && (
                       <>
+                        <h4>Rate your return experience:</h4>
                         <button className="feedback-btn" onClick={() => handleFeedback("thumbs-up")}>
-                          {/* <i className="fa-solid fa-thumbs-up"></i> */}
-                          <img src={ThumpUp} alt="Like"></img>
+                          Positive
                         </button>
                         <button className="feedback-btn" onClick={() => handleFeedback("thumbs-down")}>
-                          {/* <i className="fa-solid fa-thumbs-down"></i> */}
-                          <img src={ThumpDown} alt="Dislike"></img>
+                          Negative
                         </button>
                       </>
                     )}

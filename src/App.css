@@ -258,10 +258,15 @@
 
 .return-status h3{
   font-size: 	calc(var(--widget-font-size) * 1.429);
+  font-weight: 700;
+}
+
+.feedback h4{
+  margin: 0;
 }
 
 .feedback-btn{
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
   font-size: 36px;
   padding: 5px 15px;
   transition: 0.3s;
@@ -271,6 +276,8 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 150px;
+  font-size: var(--widget-font-size);
 }
 
 .feedback-btn:hover {
