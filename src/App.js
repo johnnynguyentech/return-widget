@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Question from "./Components/Question/Question";
 import Answered from "./Components/Answered/Answered";
+import ThumpUp from "./Assets/Images/thumbs-up-solid.svg";
+import ThumpDown from "./Assets/Images/thumbs-down-solid.svg"
 
 const questionsData = [
   {
@@ -178,10 +180,12 @@ const App = ({ config }) => {
                     {!feedback && (
                       <>
                         <button className="feedback-btn" onClick={() => handleFeedback("thumbs-up")}>
-                          <i className="fa-solid fa-thumbs-up"></i>
+                          {/* <i className="fa-solid fa-thumbs-up"></i> */}
+                          <img src={ThumpUp} alt="Like"></img>
                         </button>
                         <button className="feedback-btn" onClick={() => handleFeedback("thumbs-down")}>
-                          <i className="fa-solid fa-thumbs-down"></i>
+                          {/* <i className="fa-solid fa-thumbs-down"></i> */}
+                          <img src={ThumpDown} alt="Dislike"></img>
                         </button>
                       </>
                     )}

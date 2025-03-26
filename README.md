@@ -12,7 +12,9 @@ View the widget through this Firebase hosted link: https://return-widget.web.app
 
 ## How To Embed the Widget Into Your Webpage
 
-To add the widget to your webpage, include the following script at the bottom of your `<body>` tag in your HTML file. The widget will then be rendered inside the specified `<div>` tag which you can place any where on your webpage.
+To add the widget to your webpage, add the following CSS link to your `<head>` tag of your HTML file.
+Then include the following script at the bottom of your `<body>` tag in your HTML file.
+The widget will then be rendered inside the specified `<div>` tag which you can place any where on your webpage.
 
 Place the follow `<div>` anywhere on your webpage:
 
@@ -20,10 +22,16 @@ Place the follow `<div>` anywhere on your webpage:
 <div id="widget-container"></div>
 ```
 
+Add the CSS link to your `head` tag in your HTML file:
+```html
+<link rel="stylesheet" href="https://return-widget.web.app/static/css/main.7299bf8d.css">
+```
+
+
 Add this script at the bottom of your `<body>` tag in your HTML file. The colors, fonts, and logo are set by default but as the admin, you may change it as you please with the follow attributes:
 
 ```javascript
-<script src="https://return-widget.web.app/static/js/main.js" defer></script>
+<script src="https://return-widget.web.app/static/js/main.1baee60e.js" defer></script>
 <script>
     window.renderReturnWidget('widget-container', {
       fontFamily: "Poppins",
