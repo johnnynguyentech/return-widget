@@ -73,6 +73,7 @@
   background-color: var(--widget-color);;
   color: var(--widget-font-color);
   padding: 20px;
+  align-items: center;
 }
 
 .popup h2 {

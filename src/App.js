@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Question from "./Components/Question/Question";
 import Answered from "./Components/Answered/Answered";
-import ThumpUp from "./Assets/Images/thumbs-up-solid.svg";
-import ThumpDown from "./Assets/Images/thumbs-down-solid.svg"
 
 const questionsData = [
   {
@@ -21,12 +19,18 @@ const questionsData = [
     id: 3,
     question: "What image best describes the condition of your order?",
     type: "image-enumerated",
+    // options: [
+    //   { src: "https://i.imgur.com/XKxZDCn_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New unopened" },
+    //   { src: "https://i.imgur.com/QLn2czD_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New but opened" },
+    //   { src: "https://i.imgur.com/IKEjC0S_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Used" },
+    //   { src: "https://i.imgur.com/rU3Nk1T_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Very used" },
+    // ],
     options: [
       { src: "https://i.imgur.com/XKxZDCn_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New unopened" },
       { src: "https://i.imgur.com/QLn2czD_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New but opened" },
       { src: "https://i.imgur.com/IKEjC0S_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Used" },
       { src: "https://i.imgur.com/rU3Nk1T_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Very used" },
-    ],
+      ],
   },
   {
     id: 4,
