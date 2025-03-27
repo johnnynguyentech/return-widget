@@ -54,7 +54,7 @@ const App = ({ config }) => {
 
   const setCSSVariables = (config) => {
     const root = document.documentElement;
-    if (config.fontFamily) root.style.setProperty('--widget-font-family', config.fontFamily);
+    if (config.fontFamily)root.style.setProperty('--widget-font-family', config.fontFamily);
     if (config.fontSize) root.style.setProperty('--widget-font-size', config.fontSize);
     if (config.color) root.style.setProperty('--widget-color', config.color);
     if (config.backgroundColor) root.style.setProperty('--widget-background-color', config.backgroundColor);

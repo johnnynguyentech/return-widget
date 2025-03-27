@@ -24,7 +24,7 @@ Place the follow `<div>` anywhere on your webpage:
 
 Add the CSS link to your `head` tag in your HTML file:
 ```html
-<link rel="stylesheet" href="https://return-widget.web.app/static/css/main.d4b97b95.css">
+<link rel="stylesheet" href="https://return-widget.web.app/static/css/main.32c893d7.css">
 ```
 
 
