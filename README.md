@@ -32,6 +32,12 @@ Add this script at the bottom of your `<body>` tag in your HTML file. The colors
 
 ```javascript
 <script src="https://return-widget.web.app/static/js/main.433b8b8b.js"></script>
+<script>window.renderReturnWidget('widget-container');</script>
+```
+
+The colors, fonts, and logo are set by default but as the admin, you may change it as you please with the follow attributes in your renderReturnWidget script:
+
+```javascript
 <script>
     window.renderReturnWidget('widget-container', {
       fontFamily: "Georgia, serif",
