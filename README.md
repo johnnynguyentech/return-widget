@@ -24,14 +24,14 @@ Place the follow `<div>` anywhere on your webpage:
 
 Add the CSS link to your `head` tag in your HTML file:
 ```html
-<link rel="stylesheet" href="https://return-widget.web.app/static/css/main.134fe262.css">
+<link rel="stylesheet" href="https://return-widget.web.app/static/css/main.d4b97b95.css">
 ```
 
 
 Add this script at the bottom of your `<body>` tag in your HTML file. The colors, fonts, and logo are set by default but as the admin, you may change it as you please with the follow attributes:
 
 ```javascript
-<script src="https://return-widget.web.app/static/js/main.3ee49a93.js"></script>
+<script src="https://return-widget.web.app/static/js/main.433b8b8b.js"></script>
 <script>
     window.renderReturnWidget('widget-container', {
       fontFamily: "Georgia, serif",
@@ -39,7 +39,7 @@ Add this script at the bottom of your `<body>` tag in your HTML file. The colors
       color: '#007bff',
       backgroundColor: '#383838',
       fontColor: '#ffffff',
-      logo: 'https://i.imgur.com/QSlM0Zo.png'
+      logo: 'https://return-widget.web.app/Assets/Images/logo.png'
     });
 </script>
 ```

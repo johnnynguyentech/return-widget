@@ -19,17 +19,11 @@ const questionsData = [
     id: 3,
     question: "What image best describes the condition of your order?",
     type: "image-enumerated",
-    // options: [
-    //   { src: "https://i.imgur.com/XKxZDCn_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New unopened" },
-    //   { src: "https://i.imgur.com/QLn2czD_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New but opened" },
-    //   { src: "https://i.imgur.com/IKEjC0S_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Used" },
-    //   { src: "https://i.imgur.com/rU3Nk1T_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Very used" },
-    // ],
     options: [
-      { src: "https://i.imgur.com/XKxZDCn_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New unopened" },
-      { src: "https://i.imgur.com/QLn2czD_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "New but opened" },
-      { src: "https://i.imgur.com/IKEjC0S_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Used" },
-      { src: "https://i.imgur.com/rU3Nk1T_d.jpeg?maxwidth=520&shape=thumb&fidelity=high", alt: "Very used" },
+      { src: "https://return-widget.web.app/Assets/Images/new-unopened.jpg", alt: "New unopened" },
+      { src: "https://return-widget.web.app/Assets/Images/new-opened.jpg", alt: "New but opened" },
+      { src: "https://return-widget.web.app/Assets/Images/used.jpg", alt: "Used" },
+      { src: "https://return-widget.web.app/Assets/Images/very-used.jpg", alt: "Very used" },
       ],
   },
   {
@@ -46,7 +40,7 @@ const questionsData = [
 ];
 
 const App = ({ config }) => {
-  const [logo, setLogo] = useState("https://i.imgur.com/QSlM0Zo.png");
+  const [logo, setLogo] = useState("https://return-widget.web.app/Assets/Images/logo.png");
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -185,10 +179,10 @@ const App = ({ config }) => {
                       <>
                         <h4>Rate your return experience:</h4>
                         <button className="feedback-btn" onClick={() => handleFeedback("thumbs-up")}>
-                          Positive
+                          <img src="https://return-widget.web.app/Assets/Images/thumbs-up-solid.svg"/>
                         </button>
                         <button className="feedback-btn" onClick={() => handleFeedback("thumbs-down")}>
-                          Negative
+                          <img src="https://return-widget.web.app/Assets/Images/thumbs-down-solid.svg"/>
                         </button>
                       </>
                     )}
